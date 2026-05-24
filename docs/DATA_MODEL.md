@@ -14,7 +14,7 @@ The app uses a single table. One row per movie or TV show being tracked.
 | `status` | `text` | nullable, `check in ('watched', 'want_to_watch', 'currently_watching')` | Required by the API on create |
 | `watch_date` | `date` | nullable | Typically set when status is `watched` |
 | `rating` | `integer` | nullable, `check between 1 and 10` | |
-| `notes` | `text` | nullable | |
+| `notes` | `text` | nullable | Empty/absent notes are stored as SQL `NULL`, never the string `"null"` (see `sanitizeEntry` in `api/_supabase.js`) |
 | `created_at` | `timestamptz` | default `now()` | Used for default sort (newest first) |
 
 ### Indexes

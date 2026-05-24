@@ -59,7 +59,7 @@ function sanitizeEntry(input) {
     out.rating =
       input.rating === null || input.rating === '' ? null : parseInt(input.rating, 10);
   if (input.notes !== undefined)
-    out.notes = input.notes === '' ? null : String(input.notes);
+    out.notes = input.notes === null || input.notes === '' ? null : String(input.notes);
   return out;
 }
 
