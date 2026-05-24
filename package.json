@@ -1,0 +1,9 @@
+{
+  "name": "movielist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal movie & TV show tracker — vanilla HTML/CSS/JS + Supabase + Vercel serverless functions.",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}
